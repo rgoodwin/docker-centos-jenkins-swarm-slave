@@ -10,25 +10,8 @@ RUN yum install -y wget && wget --no-check-certificate --no-cookies --header "Co
 RUN rpm -ivh jdk-8u51-linux-x64.rpm && rm jdk-8u51-linux-x64.rpm
 
 RUN yum install -y git
-# RUN yum install -y ansible
 
-RUN yum install -y python-pip && yum install -y gcc && yum install -y python-devel && pip install ansible
-
-
-#   11  yum list *pip*
-#   12  yum install python-pip
-#   13  pip
-#   14  pip install yolk
-#   15  yolk -V ansible
-#   16  pip install ansbile
-#   17  pip install ansible
-#
-#   19  pip install ansible
-#   20  yum list *python*
-#   21  yum list *python*|grep dev
-#
-#   24  ansible --version
-#   25  history
+RUN yum install -y python-pip && yum install -y gcc && yum install -y python-devel && pip install ansible && pip install boto boto3 awscli
 
 # install nodejs
 # gpg keys listed at https://github.com/nodejs/node
