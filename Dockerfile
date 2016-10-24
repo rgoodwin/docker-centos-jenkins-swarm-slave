@@ -9,9 +9,9 @@ RUN yum -y install epel-release && yum update -y
 RUN yum install -y wget && wget --no-check-certificate --no-cookies --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u51-b16/jdk-8u51-linux-x64.rpm
 RUN rpm -ivh jdk-8u51-linux-x64.rpm && rm jdk-8u51-linux-x64.rpm
 
-RUN yum install -y git && yum install -y python-pip && yum install -y gcc && yum install -y python-devel && yum install -y libffi-devel && yum install -y install openssl-devel 
+RUN yum install -y git && yum install -y python-pip && yum install -y gcc && yum install -y python-devel && yum install -y libffi-devel && yum install -y install openssl-devel
 
-RUN pip install ansible && pip install boto boto3 awscli
+RUN pip install ansible && pip install boto boto3 awscli httplib2
 
 ## install nodejs
 ## gpg keys listed at https://github.com/nodejs/node
